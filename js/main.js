@@ -125,7 +125,7 @@
                 label: "Salse",
                 fill: false,
                 backgroundColor: "rgba(0, 156, 255, .3)",
-                data: [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15]
+                data: [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 16]
             }]
         },
         options: {
