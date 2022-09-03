@@ -8,7 +8,12 @@ $(document).ready(function() {
     var StatusRelay6;
     var StatusRelay7;
     var StatusRelay8;
-    var StatusRelay9; 
+    var StatusRelay9;
+    
+    var suhu1;
+    var suhu2;
+    var suhu3;
+    var suhu4;
 
     database.ref().child('Relay').on("value",function(snap){
         StatusRelay1 = snap.val().StatusRelay1;
@@ -61,4 +66,16 @@ $(document).ready(function() {
             $("#dh-ic-kamardepan").addClass("nav-link disabled");
         }
     })
+
+    database.ref().child('Temp').on("value",function(snap){
+        suhu1 = snap.val().suhu1;
+        suhu2 = snap.val().suhu2;
+        suhu3 = snap.val().suhu3;
+        suhu4 = snap.val().suhu4;
+
+        document.getElementById("temp-kamartamu").innerHTML = suhu1;
+        document.getElementById("temp-teras").innerHTML = suhu2;
+        document.getElementById("temp-ruangtengah").innerHTML = suhu3;
+        document.getElementById("temp-kamardepan").innerHTML = suhu4;
+    });
 });
