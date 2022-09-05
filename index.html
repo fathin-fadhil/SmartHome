@@ -192,26 +192,26 @@
                                 </div>
     
                                 <div class="d-flex align-items-center border-bottom py-3">
-                                    <i class="fa fa-lightbulb nav-link disabled" id="dh-ic-kamartamu"></i>
+                                    <i class="fa fa-lightbulb nav-link disabled" id="dh-ic-terasdepan"></i>
                                     <div class="w-100 ms-3">
                                         <div class="d-flex w-100 justify-content-between">
-                                            <h6 class="mb-0">Kamar Tamu</h6>                            
+                                            <h6 class="mb-0">Teras Depan</h6>                            
                                         </div>
-                                        <span id="dh-sts-kamartamu">OFF</span>
+                                        <span id="dh-sts-terasdepan">OFF</span>
                                     </div>
                                 </div>
     
                                 <div class="d-flex align-items-center border-bottom py-3">
-                                    <i class="fa fa-lightbulb nav-link disabled" id="dh-ic-teras"></i>
+                                    <i class="fa fa-lightbulb nav-link disabled" id="dh-ic-ruangtamu"></i>
                                     <div class="w-100 ms-3">
                                         <div class="d-flex w-100 justify-content-between">
-                                            <h6 class="mb-0">Teras</h6>                            
+                                            <h6 class="mb-0">Ruang Tamu</h6>                            
                                         </div>
-                                        <span id="dh-sts-teras">OFF</span>
+                                        <span id="dh-sts-ruangtamu">OFF</span>
                                     </div>
                                 </div>
     
-                                <div class="d-flex align-items-center border-bottom py-3">
+                                <!-- <div class="d-flex align-items-center border-bottom py-3">
                                     <i class="fa fa-lightbulb nav-link disabled" id="dh-ic-ruangtengah"></i>
                                     <div class="w-100 ms-3">
                                         <div class="d-flex w-100 justify-content-between">
@@ -219,8 +219,8 @@
                                         </div>
                                         <span id="dh-sts-ruangtengah">OFF</span>
                                     </div>
-                                </div>
-    
+                                </div> -->
+
                                 <div class="d-flex align-items-center border-bottom py-3">
                                     <i class="fa fa-lightbulb nav-link disabled" id="dh-ic-kamardepan"></i>
                                     <div class="w-100 ms-3">
@@ -228,6 +228,26 @@
                                             <h6 class="mb-0">Kamar Depan</h6>                            
                                         </div>
                                         <span id="dh-sts-kamardepan">OFF</span>
+                                    </div>
+                                </div>
+    
+                                <!-- <div class="d-flex align-items-center border-bottom py-3">
+                                    <i class="fa fa-lightbulb nav-link disabled" id="dh-ic-kamardepan"></i>
+                                    <div class="w-100 ms-3">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-0">Kamar Depan</h6>                            
+                                        </div>
+                                        <span id="dh-sts-kamardepan">OFF</span>
+                                    </div>
+                                </div> -->
+
+                                <div class="d-flex align-items-center border-bottom py-3">
+                                    <i class="fa fa-lightbulb nav-link disabled" id="dh-ic-ruangtengah"></i>
+                                    <div class="w-100 ms-3">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-0">Ruang Tengah</h6>                            
+                                        </div>
+                                        <span id="dh-sts-ruangtengah">OFF</span>
                                     </div>
                                 </div>
     
@@ -263,10 +283,10 @@
                             <div class="d-flex align-items-center border-bottom py-3">
                                 <div class="w-100">
                                     <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Kamar Tamu</h6>                            
+                                        <h6 class="mb-0">Ruang Tamu</h6>                            
                                     </div>
                                     <div class="d-flex">
-                                        <span id="temp-kamartamu">34</span>
+                                        <span id="temp-ruangtamu">34</span>
                                         <span>°C</span>
                                     </div>
                                     
@@ -284,19 +304,7 @@
                                     </div>
                                 </div>
                             </div>
-        
-                            <div class="d-flex align-items-center border-bottom py-3"> 
-                                <div class="w-100">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Ruang Tengah</h6>                            
-                                    </div>
-                                    <div class="d-flex">
-                                        <span id="temp-ruangtengah">34</span>
-                                        <span>°C</span>
-                                    </div>
-                                </div>
-                            </div>
-        
+
                             <div class="d-flex align-items-center border-bottom py-3">
                                 <div class="w-100">
                                     <div class="d-flex w-100 justify-content-between">
@@ -304,6 +312,18 @@
                                     </div>
                                     <div class="d-flex">
                                         <span id="temp-kamardepan">34</span>
+                                        <span>°C</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center border-bottom py-3"> 
+                                <div class="w-100">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-0">Ruang Tengah</h6>                            
+                                    </div>
+                                    <div class="d-flex">
+                                        <span id="temp-ruangtengah">34</span>
                                         <span>°C</span>
                                     </div>
                                 </div>
@@ -342,60 +362,6 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <style>
-        .centered-element {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-          }
-
-        .big-svg {  
-            width: 5rem;
-            height: 5rem;
-            filter: invert(50%) sepia(98%) saturate(3532%) hue-rotate(181deg) brightness(103%) contrast(104%);    
-        }
-
-        .dot {
-            width: 10rem;
-            height: 10rem;
-            background-color: rgb(255, 255, 255);
-            border-radius: 50%;
-            display: inline-block;
-            }
-
-        .centered-element2 {
-            margin: 0;
-            position: absolute;
-            transform: translate(50%,50%);
-            }
-
-        .bigNum {
-            font-family: 'Nunito', sans-serif;
-            }   
-
-        .title1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
-            }
-
-        .shadow {
-            box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
-            }
-
-        .dotsm {
-            width: 2rem;
-            height: 2rem;
-            background-color: rgb(255, 255, 255);
-            border-radius: 50%;
-            display: inline-block;
-        }
-        
-        .small-svg {  
-            width: 1rem;
-            height: 1rem;
-            filter: invert(50%) sepia(98%) saturate(3532%) hue-rotate(181deg) brightness(103%) contrast(104%);    
-            }
-    </style>
 </body>
 
 </html>
