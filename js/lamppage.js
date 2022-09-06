@@ -1,9 +1,21 @@
+//spinner start
+var spinner = function () {
+    setTimeout(function () {
+        if ($('#spinner').length > 0) {
+            $('#spinner').removeClass('show');
+        }
+    }, 1);
+};
+spinner();
+//spinner end
+
 var StatusRelay1;
 var StatusRelay2;
 var StatusRelay3;
 var StatusRelay4;
 var StatusRelay5;
 var StatusRelay6;
+
 
 $(document).ready(function() {
     var database = firebase.database();    

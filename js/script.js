@@ -1,15 +1,20 @@
+// Spinner
+var spinner = function () {
+    setTimeout(function () {
+        if ($('#spinner').length > 0) {
+            $('#spinner').removeClass('show');
+        }
+    }, 1);
+};
+spinner();
+//spinner end
+
 $(document).ready(function() {
     var database = firebase.database();
     var StatusRelay1;
     var StatusRelay2;
     var StatusRelay3;
     var StatusRelay4;
-    var StatusRelay5;
-    var StatusRelay6;
-    var StatusRelay7;
-    var StatusRelay8;
-    var StatusRelay9;
-    
     var suhu1;
     var suhu2;
     var suhu3;
@@ -20,11 +25,6 @@ $(document).ready(function() {
         StatusRelay2 = snap.val().StatusRelay2;
         StatusRelay3 = snap.val().StatusRelay3;
         StatusRelay4 = snap.val().StatusRelay4;
-        StatusRelay5 = snap.val().StatusRelay5;
-        StatusRelay6 = snap.val().StatusRelay6;
-        StatusRelay7 = snap.val().StatusRelay7;
-        StatusRelay8 = snap.val().StatusRelay8;
-        StatusRelay9 = snap.val().StatusRelay9;
             
         if(StatusRelay1 == "ON"){
             document.getElementById("dh-sts-terasdepan").innerHTML = "ON";
