@@ -118,11 +118,11 @@
                                 <div>
                                     <div class="centered-element">
                                         <h6 class="mb-0">Teras Depan</h6>
-                                        <p class="mb-0" id="sts-terasdepan">OFF</p>
+                                        <p class="mb-0" id="sts-terasdepan">Loading...</p>
                                     </div>                                    
                                 </div>
             
-                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="togTerasDepan()">
+                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="globalUpdate('StatusRelay1');">
                                     <div class="centered-element">
                                         <i class="bi bi-lightbulb-off-fill lampico centered-element" id="ic-terasdepan"></i>
                                     </div>                                    
@@ -137,11 +137,11 @@
                                 <div>
                                     <div class="centered-element">
                                         <h6 class="mb-0">Ruang Tamu</h6>
-                                        <p class="mb-0" id="sts-ruangtamu">OFF</p>
+                                        <p class="mb-0" id="sts-ruangtamu">Loading...</p>
                                     </div>                                    
                                 </div>
             
-                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="togRuangTamu()">
+                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="globalUpdate('StatusRelay2');">
                                     <div class="centered-element">
                                         <i class="bi bi-lightbulb-off-fill lampico centered-element" id="ic-ruangtamu"></i>
                                     </div>
@@ -158,11 +158,11 @@
                                 <div>
                                     <div class="centered-element">
                                         <h6 class="mb-0">Kamar Depan</h6>
-                                        <p class="mb-0" id="sts-kamardepan">OFF</p>
+                                        <p class="mb-0" id="sts-kamardepan">Loading...</p>
                                     </div>                                    
                                 </div>
             
-                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="togKamarDepan()">
+                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="globalUpdate('StatusRelay3');">
                                     <div class="centered-element">
                                         <i class="bi bi-lightbulb-off-fill lampico centered-element" id="ic-kamardepan"></i>
                                     </div>
@@ -177,11 +177,11 @@
                                 <div>
                                     <div class="centered-element">
                                         <h6 class="mb-0">Ruang Tengah</h6>
-                                        <p class="mb-0" id="sts-ruangtengah">OFF</p>
+                                        <p class="mb-0" id="sts-ruangtengah">Loading...</p>
                                     </div>                                    
                                 </div>
             
-                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="togRuangTengah()">
+                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="globalUpdate('StatusRelay4');">
                                     <div class="centered-element">
                                         <i class="bi bi-lightbulb-off-fill lampico centered-element" id="ic-ruangtengah"></i>
                                     </div>
@@ -190,15 +190,47 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <div class="row g-4 pt-4">
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded p-4 shadow">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <div class="centered-element">
+                                        <h6 class="mb-0">Teras Samping</h6>
+                                        <p class="mb-0" id="sts-terassamping">Loading...</p>
+                                    </div>                                    
+                                </div>
             
-            <!-- Blank End -->
+                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="globalUpdate('StatusRelay5');">
+                                    <div class="centered-element">
+                                        <i class="bi bi-lightbulb-off-fill lampico centered-element" id="ic-terassamping"></i>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
 
-
-            <!-- Footer Start -->
-            this is a footer
-            <!-- Footer End -->
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded p-4 shadow">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <div class="centered-element">
+                                        <h6 class="mb-0">Kamar Belakang</h6>
+                                        <p class="mb-0" id="sts-kamarbelakang">Loading...</p>
+                                    </div>                                    
+                                </div>
+            
+                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="globalUpdate('StatusRelay6');">
+                                    <div class="centered-element">
+                                        <i class="bi bi-lightbulb-off-fill lampico centered-element" id="ic-kamarbelakang"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Content End -->
 
