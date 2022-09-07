@@ -18,6 +18,12 @@ var StatusRelay6;
 
 
 $(document).ready(function() {
+    //sidebar toggle start
+    $('.sidebar-toggler').click(function () {
+        $('.sidebar, .content').toggleClass("open");
+        return false;
+    });
+    
     var database = firebase.database();    
 
     database.ref().child('Relay').on("value",function(snap){

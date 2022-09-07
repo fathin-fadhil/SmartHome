@@ -233,10 +233,10 @@
         gaugeValueElem = svg("text", {
           x: 50,
           y: 50,
-          fill: "#999",
+          fill: "#191C24",
           "class": valueTextClass,
           "font-size": "100%",
-          "font-family": "sans-serif",
+          "font-family": "Poppins, sans-serif",
           "font-weight": "normal",
           "text-anchor": "middle",
           "alignment-baseline": "middle",
@@ -274,7 +274,7 @@
             // this is because we are using arc greater than 180deg
             flag = angle <= 180 ? 0 : 1;
         if(displayValue) {
-          gaugeValueElem.textContent = label.call(opts, theValue);
+          gaugeValueElem.textContent = label.call(opts, theValue) + '°C';
         }
         gaugeValuePath.setAttribute("d", pathString(radius, startAngle, angle + startAngle, flag));
       }

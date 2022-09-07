@@ -9,7 +9,15 @@ var spinner = function () {
 spinner();
 //spinner end
 
+
+
 $(document).ready(function() {
+    //sidebar toggle start
+    $('.sidebar-toggler').click(function () {
+        $('.sidebar, .content').toggleClass("open");
+        return false;
+    });
+
     var database = firebase.database();
     var StatusRelay1;
     var StatusRelay2;
