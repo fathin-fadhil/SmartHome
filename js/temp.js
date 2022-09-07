@@ -30,13 +30,15 @@ $(document).ready(function() {
 
         /* document.getElementById("t1").innerHTML = suhu1 + '°C';
         document.getElementById("t2").innerHTML = suhu2 + '°C'; */
-        update(Number(suhu1), Number(suhu2));
+        update(suhu1, suhu2, suhu3, suhu4);
 
     });
 });
 
-function update(num1, num2) {
+function update(num1, num2, num3, num4) {
     gauge1.setValueAnimated(num1,2)
     gauge2.setValueAnimated(num2,2)
+    gauge3.setValueAnimated(num3,2)
+    gauge4.setValueAnimated(num4,2)
     
 }
