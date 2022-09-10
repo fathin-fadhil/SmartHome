@@ -37,7 +37,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
     <!-- <script src="js/script.js"></script> -->
-    <script src="js/lamppage.js"></script>
+    <script src="js/tap.js"></script>
 </head>
 
 <body>
@@ -82,11 +82,11 @@
                 <div class="navbar-nav w-100">
                     <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     
-                    <a href="lightsw.html" class="nav-item nav-link active"><i class="fa fa-lightbulb me-2"></i>Light Switches</a>
+                    <a href="lightsw.html" class="nav-item nav-link"><i class="fa fa-lightbulb me-2"></i>Light Switches</a>
 
                     <a href="temp.html" class="nav-item nav-link"><i class="fas fa-thermometer-half me-2"></i>Temperatures</a>
 
-                    <a href="watertap.html" class="nav-item nav-link"><i class="fas fa-tint me-2"></i>Water Tap</a>
+                    <a href="watertap.html" class="nav-item nav-link active"><i class="fas fa-tint me-2"></i>Water Tap</a>
                     
                 </div>
             </nav>
@@ -106,7 +106,7 @@
                 </a>
 
                 <div class=" d-md-flex" style="padding: 20px;">
-                    <h3 class="mb-0">Light Switches</h3>
+                    <h3 class="mb-0">Water Tap</h3>
                 </div>
             </nav>
             <!-- Navbar End -->
@@ -121,14 +121,14 @@
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <div class="centered-element">
-                                        <h6 class="mb-0">Teras Depan</h6>
-                                        <p class="mb-0" id="sts-terasdepan">Loading...</p>
+                                        <h6 class="mb-0">Tanaman Teras</h6>
+                                        <p class="mb-0" id="sts-tteras">Loading...</p>
                                     </div>                                    
                                 </div>
             
-                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="globalUpdate('StatusRelay1');">
+                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="globalUpdate('kran1');">
                                     <div class="centered-element">
-                                        <i class="bi bi-lightbulb-off-fill lampico centered-element" id="ic-terasdepan"></i>
+                                        <i class="fas fa-tint-slash lampico" id="ic-tteras"></i>                                        
                                     </div>                                    
                                 </div>
                             </div>                            
@@ -140,14 +140,14 @@
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <div class="centered-element">
-                                        <h6 class="mb-0">Ruang Tamu</h6>
-                                        <p class="mb-0" id="sts-ruangtamu">Loading...</p>
+                                        <h6 class="mb-0">Tanaman Gantung </h6>
+                                        <p class="mb-0" id="sts-tgantung">Loading...</p>
                                     </div>                                    
                                 </div>
             
-                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="globalUpdate('StatusRelay2');">
+                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="globalUpdate('kran2');">
                                     <div class="centered-element">
-                                        <i class="bi bi-lightbulb-off-fill lampico centered-element" id="ic-ruangtamu"></i>
+                                        <i class="fas fa-tint-slash lampico" id="ic-tgantung"></i>
                                     </div>
                                 </div>
                             </div>                           
@@ -161,79 +161,21 @@
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <div class="centered-element">
-                                        <h6 class="mb-0">Kamar Depan</h6>
-                                        <p class="mb-0" id="sts-kamardepan">Loading...</p>
+                                        <h6 class="mb-0">Tanaman Samping</h6>
+                                        <p class="mb-0" id="sts-tsamping">Loading...</p>
                                     </div>                                    
                                 </div>
             
-                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="globalUpdate('StatusRelay3');">
+                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="globalUpdate('kran3');">
                                     <div class="centered-element">
-                                        <i class="bi bi-lightbulb-off-fill lampico centered-element" id="ic-kamardepan"></i>
+                                        <i class="fas fa-tint-slash lampico" id="ic-tsamping"></i>
                                     </div>
                                 </div>
                             </div> 
                         </div>
                     </div>
-
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-light rounded p-4 shadow">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <div class="centered-element">
-                                        <h6 class="mb-0">Ruang Tengah</h6>
-                                        <p class="mb-0" id="sts-ruangtengah">Loading...</p>
-                                    </div>                                    
-                                </div>
-            
-                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="globalUpdate('StatusRelay4');">
-                                    <div class="centered-element">
-                                        <i class="bi bi-lightbulb-off-fill lampico centered-element" id="ic-ruangtengah"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
-                <div class="row g-4 pt-4">
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-light rounded p-4 shadow">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <div class="centered-element">
-                                        <h6 class="mb-0">Teras Samping</h6>
-                                        <p class="mb-0" id="sts-terassamping">Loading...</p>
-                                    </div>                                    
-                                </div>
-            
-                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="globalUpdate('StatusRelay5');">
-                                    <div class="centered-element">
-                                        <i class="bi bi-lightbulb-off-fill lampico centered-element" id="ic-terassamping"></i>
-                                    </div>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-light rounded p-4 shadow">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <div class="centered-element">
-                                        <h6 class="mb-0">Kamar Belakang</h6>
-                                        <p class="mb-0" id="sts-kamarbelakang">Loading...</p>
-                                    </div>                                    
-                                </div>
-            
-                                <div class="squaresm shadow-sm text-center" style="cursor: pointer;" onclick="globalUpdate('StatusRelay6');">
-                                    <div class="centered-element">
-                                        <i class="bi bi-lightbulb-off-fill lampico centered-element" id="ic-kamarbelakang"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- Content End -->
