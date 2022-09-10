@@ -83,7 +83,7 @@ $(document).ready(function() {
 
         document.getElementById("temp-ruangtamu").innerHTML = suhu1;
         document.getElementById("temp-teras").innerHTML = suhu2;
-        document.getElementById("temp-ruangtengah").innerHTML = suhu3;
-        document.getElementById("temp-kamardepan").innerHTML = suhu4;
+        document.getElementById("temp-kamardepan").innerHTML = suhu3;
+        document.getElementById("temp-ruangtengah").innerHTML = suhu4;
     });
 });
