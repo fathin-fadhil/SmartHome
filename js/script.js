@@ -27,49 +27,49 @@ $(document).ready(function() {
     var suhu2;
     var suhu3;
     var suhu4;
+    var kran1;
+    var kran2;
+    var kran3;
 
     database.ref().child('Relay').on("value",function(snap){
         StatusRelay1 = snap.val().StatusRelay1;
         StatusRelay2 = snap.val().StatusRelay2;
         StatusRelay3 = snap.val().StatusRelay3;
         StatusRelay4 = snap.val().StatusRelay4;
+
+        document.getElementById("dh-sts-terasdepan").innerHTML = StatusRelay1
+        document.getElementById("dh-sts-ruangtamu").innerHTML = StatusRelay2
+        document.getElementById("dh-sts-kamardepan").innerHTML = StatusRelay3
+        document.getElementById("dh-sts-ruangtengah").innerHTML = StatusRelay4
             
         if(StatusRelay1 == "ON"){
-            document.getElementById("dh-sts-terasdepan").innerHTML = "ON";
             $("#dh-ic-terasdepan").removeClass("nav-link disabled");
             $("#dh-ic-terasdepan").addClass("nav-link active");
-        } else {
-            document.getElementById("dh-sts-terasdepan").innerHTML = "OFF";
+        } else {            
             $("#dh-ic-terasdepan").removeClass("nav-link active");
             $("#dh-ic-terasdepan").addClass("nav-link disabled");
         }
 
-        if(StatusRelay2 == "ON"){
-            document.getElementById("dh-sts-ruangtamu").innerHTML = "ON";
+        if(StatusRelay2 == "ON"){            
             $("#dh-ic-ruangtamu").removeClass("nav-link disabled");
             $("#dh-ic-ruangtamu").addClass("nav-link active");
-        } else {
-            document.getElementById("dh-sts-ruangtamu").innerHTML = "OFF";
+        } else {            
             $("#dh-ic-ruangtamu").removeClass("nav-link active");
             $("#dh-ic-ruangtamu").addClass("nav-link disabled");
         }
 
-        if(StatusRelay3 == "ON"){
-            document.getElementById("dh-sts-kamardepan").innerHTML = "ON";
+        if(StatusRelay3 == "ON"){            
             $("#dh-ic-kamardepan").removeClass("nav-link disabled");
             $("#dh-ic-kamardepan").addClass("nav-link active");
-        } else {
-            document.getElementById("dh-sts-kamardepan").innerHTML = "OFF";
+        } else {            
             $("#dh-ic-kamardepan").removeClass("nav-link active");
             $("#dh-ic-kamardepan").addClass("nav-link disabled");
         }
 
-        if(StatusRelay4 == "ON"){            
-        document.getElementById("dh-sts-ruangtengah").innerHTML = "ON";
+        if(StatusRelay4 == "ON"){                    
             $("#dh-ic-ruangtengah").removeClass("nav-link disabled");
             $("#dh-ic-ruangtengah").addClass("nav-link active");
-        } else {
-            document.getElementById("dh-sts-ruangtengah").innerHTML = "OFF";
+        } else {            
             $("#dh-ic-ruangtengah").removeClass("nav-link active");
             $("#dh-ic-ruangtengah").addClass("nav-link disabled");
         }
@@ -85,5 +85,39 @@ $(document).ready(function() {
         document.getElementById("temp-teras").innerHTML = suhu2;
         document.getElementById("temp-kamardepan").innerHTML = suhu3;
         document.getElementById("temp-ruangtengah").innerHTML = suhu4;
-    });
+    })
+
+    database.ref().child('Kran').on('value', function (snap){
+        kran1 = snap.val().kran1;
+        kran2 = snap.val().kran2;
+        kran3 = snap.val().kran3;
+
+        document.getElementById('dh-sts-tteras').innerHTML = kran1;
+        document.getElementById('dh-sts-tgantung').innerHTML = kran2;
+        document.getElementById('dh-sts-tsamping').innerHTML = kran3;
+
+        if(kran1 == "ON"){
+            $("#dh-ic-tteras").removeClass("nav-link disabled");
+            $("#dh-ic-tteras").addClass("nav-link active");
+        } else {
+            $("#dh-ic-tteras").removeClass("nav-link active");
+            $("#dh-ic-tteras").addClass("nav-link disabled");
+        }
+
+        if(kran2 == "ON"){
+            $("#dh-ic-tgantung").removeClass("nav-link disabled");
+            $("#dh-ic-tgantung").addClass("nav-link active");
+        } else {
+            $("#dh-ic-tgantung").removeClass("nav-link active");
+            $("#dh-ic-tgantung").addClass("nav-link disabled");
+        }
+
+        if(kran3 == "ON"){
+            $("#dh-ic-tsamping").removeClass("nav-link disabled");
+            $("#dh-ic-tsamping").addClass("nav-link active");
+        } else {
+            $("#dh-ic-tsamping").removeClass("nav-link active");
+            $("#dh-ic-tsamping").addClass("nav-link disabled");
+        }
+    })
 });
